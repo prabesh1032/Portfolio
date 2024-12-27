@@ -25,7 +25,7 @@
                 <li><a href="{{ route('about') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'about' ? 'text-cyan-500 font-bold' : '' }}">About</a></li>
                 <li><a href="{{ route('projects') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'projects' ? 'text-cyan-500 font-bold' : '' }}">Projects</a></li>
                 <li><a href="{{ route('contact') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'contact' ? 'text-cyan-500 font-bold' : '' }}">Contact</a></li>
-                <li><a href="{{ route('resume') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'rusume' ? 'text-cyan-500 font-bold' : '' }}">Resume</a></li>
+                <li><a href="{{ route('resume') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'resume' ? 'text-cyan-500 font-bold' : '' }}">Resume</a></li>
                 <li><a href="{{ route('login') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'login' ? 'text-cyan-500 font-bold' : '' }}">
                         <i class="ri-login-box-line text-xl"></i> Login</a></li>
             </ul>

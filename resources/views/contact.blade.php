@@ -5,7 +5,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="text-center py-20 bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-900">
-        <h2 class="text-4xl font-semibold mb-4">Contact Me</h2>
+        <h2 class="text-4xl font-semibold mb-4 animate-bounce">Contact Me</h2>
         <p class="text-lg max-w-2xl mx-auto">
             I would love to hear from you! Whether you're looking to collaborate, discuss a job opportunity, or just chat about technology, feel free to reach out using the form or through my social media channels.
         </p>

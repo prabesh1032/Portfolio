@@ -1,65 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title') | My Application</title>
-    <!-- Link to Google Fonts and Icon Library -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-poppins bg-gray-100">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Navbar -->
-    <header class="bg-indigo-600 text-white shadow-md fixed w-full z-10">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <a href="/" class="text-3xl font-semibold text-white">MyApp</a>
-            <div class="flex space-x-6">
-                <a href="#" class="text-white hover:text-indigo-200">Home</a>
-                <a href="#about" class="text-white hover:text-indigo-200">About</a>
-                <a href="#contact" class="text-white hover:text-indigo-200">Contact</a>
+    <title>{{ config('app.name', 'Portfolio') }} - @yield('title')</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="font-sans antialiased bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-56 h-screen sticky top-0 bg-blue-600 shadow-lg text-white">
+            <div class="flex flex-col items-center mt-5">
+                <img src="{{ asset('user.jpg') }}" alt="Admin Avatar" class="w-24 h-24 rounded-full shadow-lg">
+                <h2 class="mt-3 text-lg font-bold">Prabesh Acharya</h2>
+                <p class="text-sm">Web Developer | Laravel Enthusiast</p>
+            </div>
+            <div class="mt-5 space-y-1">
+                <a href="{{ route('dashboard') }}" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
+                    <i class="ri-dashboard-line mr-2"></i> Dashboard
+                </a>
+                <a href="{{ route('projects.index') }}" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
+                    <i class="ri-folder-line mr-2"></i> Manage Projects
+                </a>
+                <a href="" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
+                    <i class="ri-lightbulb-line mr-2"></i> Manage Skills
+                </a>
+                <a href="" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
+                    <i class="ri-mail-line mr-2"></i> Contact Inquiries
+                </a>
+                <form action="{{ route('logout') }}" method="POST" class="block p-3 hover:bg-red-600 transition duration-200 ease-in-out">
+                    @csrf
+                    <button type="submit" class="w-full flex items-center">
+                        <i class="ri-logout-box-line mr-2"></i> Logout
+                    </button>
+                </form>
             </div>
         </div>
-    </header>
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-4xl font-bold">@yield('title')</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <i class="ri-notification-3-line text-2xl text-gray-700"></i>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">3</span>
+                    </div>
+                    <img src="{{ asset('useravatar.avif') }}" alt="User Avatar" class="w-8 h-8 rounded-full">
+                </div>
+            </div>
+            <hr class="mb-6 border-gray-300">
 
-    <!-- Main Content -->
-    <div class="flex pt-20">
-        <!-- Sidebar -->
-        <div class="w-64 bg-indigo-700 text-white py-8 px-6 flex flex-col space-y-6">
-            <h2 class="text-2xl font-semibold">Dashboard</h2>
-            <ul class="space-y-4">
-                <li>
-                    <a href="#" class="flex items-center space-x-2 text-white hover:bg-indigo-800 p-2 rounded-md">
-                        <i class="ri-dashboard-line text-xl"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex items-center space-x-2 text-white hover:bg-indigo-800 p-2 rounded-md">
-                        <i class="ri-user-line text-xl"></i>
-                        <span>Users</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex items-center space-x-2 text-white hover:bg-indigo-800 p-2 rounded-md">
-                        <i class="ri-settings-3-line text-xl"></i>
-                        <span>Settings</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Content Area -->
-        <div class="flex-1 bg-gray-50 p-6">
+            <!-- Content -->
             @yield('content')
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-indigo-600 text-white text-center py-4 mt-auto">
-        <p>&copy; 2024 My Application. All rights reserved.</p>
-    </footer>
 </body>
 </html>

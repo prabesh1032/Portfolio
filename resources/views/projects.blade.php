@@ -6,7 +6,7 @@
     <!-- Hero Section for Project -->
     <section class="bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-800 py-20 relative">
         <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold leading-tight mb-4">Project Portfolio</h1>
+            <h1 class="text-5xl font-bold leading-tight mb-4 animate-bounce">Project Portfolio</h1>
             <p class="text-lg mb-6">Explore my featured projects where I’ve applied my skills in Laravel, JavaScript, and more to create solutions that make a difference.</p>
         </div>
     </section>

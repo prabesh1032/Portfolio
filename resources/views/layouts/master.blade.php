@@ -9,6 +9,37 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Include CSS -->
     @vite(['resources/css/app.css'])
+    <style>
+        /* Hover effect for navigation links */
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00bcd4; /* Cyan color */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .nav-link:hover {
+            color: #00bcd4; /* Cyan color */
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -21,12 +52,12 @@
 
             <!-- Navigation Links -->
             <ul class="flex space-x-8">
-                <li><a href="{{ route('home') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'home' ? 'text-cyan-500 font-bold' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'about' ? 'text-cyan-500 font-bold' : '' }}">About</a></li>
-                <li><a href="{{ route('projects') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'projects' ? 'text-cyan-500 font-bold' : '' }}">Projects</a></li>
-                <li><a href="{{ route('contact') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'contact' ? 'text-cyan-500 font-bold' : '' }}">Contact</a></li>
-                <li><a href="{{ route('resume') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'resume' ? 'text-cyan-500 font-bold' : '' }}">Resume</a></li>
-                <li><a href="{{ route('login') }}" class="hover:text-cyan-500 {{ Route::currentRouteName() == 'login' ? 'text-cyan-500 font-bold' : '' }}">
+                <li><a href="{{ route('home') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'home' ? 'text-cyan-500 font-bold' : '' }}">Home</a></li>
+                <li><a href="{{ route('about') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'about' ? 'text-cyan-500 font-bold' : '' }}">About</a></li>
+                <li><a href="{{ route('project') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'project' ? 'text-cyan-500 font-bold' : '' }}">Projects</a></li>
+                <li><a href="{{ route('contact') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'contact' ? 'text-cyan-500 font-bold' : '' }}">Contact</a></li>
+                <li><a href="{{ route('resume') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'resume' ? 'text-cyan-500 font-bold' : '' }}">Resume</a></li>
+                <li><a href="{{ route('login') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'login' ? 'text-cyan-500 font-bold' : '' }}">
                         <i class="ri-login-box-line text-xl"></i> Login</a></li>
             </ul>
         </nav>

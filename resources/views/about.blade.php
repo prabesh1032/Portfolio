@@ -5,7 +5,7 @@
 @section('content')
     <!-- Hero Section -->
     <section class="text-center py-24 bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-900">
-        <h2 class="text-5xl font-extrabold mb-6 text-gray-800">About Me</h2>
+        <h2 class="text-5xl font-extrabold mb-6 text-gray-800 animate-bounce">About Me</h2>
         <p class="text-xl max-w-4xl mx-auto mb-6 text-gray-700">
             Hi there! I'm <span class="text-gray-900 font-semibold">Prabesh Acharya</span>, a passionate web developer with a focus on frontend development, Laravel, JavaScript, and more.
             I believe in creating seamless and intuitive web experiences, turning complex ideas into simple, interactive solutions.
@@ -67,7 +67,7 @@
                 Over time, I've worked on various projects, growing my skillset and refining my approach to building beautiful, functional web applications.
                 I'm always learning, experimenting, and pushing myself to stay ahead of the curve.
             </p>
-            <a href="{{ route('projects') }}" class="bg-indigo-600 text-white px-8 py-4 rounded-full text-xl hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">See My Projects</a>
+            <a href="{{ route('project') }}" class="bg-indigo-600 text-white px-8 py-4 rounded-full text-xl hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">See My Projects</a>
         </div>
     </section>
 

@@ -4,13 +4,13 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="text-center py-24 bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-900">
+    <section class="text-center py-24 bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 text-gray-900">
         <h2 class="text-5xl font-extrabold mb-6 text-gray-800 animate-bounce">About Me</h2>
-        <p class="text-xl max-w-4xl mx-auto mb-6 text-gray-700">
-            Hi there! I'm <span class="text-gray-900 font-semibold">Prabesh Acharya</span>, a passionate web developer with a focus on frontend development, Laravel, JavaScript, and more.
+        <p class="text-xl max-w-4xl mx-auto mb-6 text-gray-900">
+            Hi there! I'm <span class="text-gray-900 text-2xl font-semibold">Prabesh Acharya</span>, a passionate web developer with a focus on frontend development, Laravel, JavaScript, and more.
             I believe in creating seamless and intuitive web experiences, turning complex ideas into simple, interactive solutions.
         </p>
-        <a href="#contact" class="bg-white text-indigo-500 px-8 py-4 rounded-full text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105">Let's Connect</a>
+        <a href="#contact" class="bg-white text-indigo-500 px-6 py-2 rounded-lg text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105">Let's Connect</a>
     </section>
 
     <!-- Photo & Skills Section -->

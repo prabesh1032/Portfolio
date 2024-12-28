@@ -8,7 +8,7 @@
     <title>@yield('title', 'Portfolio')</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Include CSS -->
-    @vite(['resources/css/app.css'])
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <style>
         /* Hover effect for navigation links */
         .nav-link {
@@ -73,13 +73,43 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col sm:flex-row justify-between items-center">
                 <p class="text-sm mb-4 sm:mb-0">© {{ date('Y') }} My Portfolio. All rights reserved.</p>
-                <ul class="flex space-x-6">
-                    <li><a href="https://github.com" target="_blank" class="hover:text-indigo-300">
-                            <i class="ri-github-line text-2xl"></i></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" class="hover:text-indigo-300">
-                            <i class="ri-linkedin-line text-2xl"></i></a></li>
-                    <li><a href="https://twitter.com" target="_blank" class="hover:text-indigo-300">
-                            <i class="ri-twitter-line text-2xl"></i></a></li>
+                <ul class="flex space-x-8">
+                    <li>
+                        <a href="https://github.com/prabesh1032" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-github-line text-3xl text-black hover:text-gray-700"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/prabesh-acharya-8547a2321/" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-linkedin-line text-3xl text-blue-700 hover:text-blue-800"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:prabesh@example.com" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-mail-line text-3xl text-red-500 hover:text-red-600"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+1234567890" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-phone-line text-3xl text-green-500 hover:text-green-600"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/yourprofile" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-facebook-circle-line text-3xl text-blue-600 hover:text-blue-700"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/prabesh_ach/" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-instagram-fill text-3xl text-purple-600 hover:text-purple-700"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/PrabeshAch33319" target="_blank" class="hover:scale-110 transition">
+                            <i class="ri-twitter-x-line text-3xl text-black hover:text-gray-700"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="mt-6 text-center">
@@ -88,43 +118,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Login Modal (Added for Login) -->
-    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-8 rounded-lg w-96">
-            <h3 class="text-2xl font-semibold text-center mb-4">Login</h3>
-            <form action="{{ route('login') }}" method="POST">
-                @csrf
-                <div class="mb-4">
-                    <label for="email" class="block text-sm text-gray-700">Email</label>
-                    <input type="email" name="email" id="email" class="w-full px-4 py-2 border rounded-md" required>
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-sm text-gray-700">Password</label>
-                    <input type="password" name="password" id="password" class="w-full px-4 py-2 border rounded-md"
-                        required>
-                </div>
-                <div class="flex justify-between items-center">
-                    <button type="submit" class="bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700">Login</button>
-                    <button type="button" onclick="closeLoginModal()" class="text-red-500">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Open Login Modal
-        function openLoginModal() {
-            document.getElementById('loginModal').classList.remove('hidden');
-        }
-
-        // Close Login Modal
-        function closeLoginModal() {
-            document.getElementById('loginModal').classList.add('hidden');
-        }
-    </script>
-
-    <!-- Include JavaScript -->
     @vite(['resources/js/app.js'])
 </body>
 

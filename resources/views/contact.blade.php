@@ -4,8 +4,8 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="text-center py-20 bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-900">
-        <h2 class="text-4xl font-semibold mb-4 animate-bounce">Contact Me</h2>
+    <section class="text-center py-20 bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 text-gray-900">
+        <h2 class="text-5xl font-extrabold mb-6 text-gray-800 animate-bounce">Contact Me</h2>
         <p class="text-lg max-w-2xl mx-auto">
             I would love to hear from you! Whether you're looking to collaborate, discuss a job opportunity, or just chat about technology, feel free to reach out using the form or through my social media channels.
         </p>
@@ -47,22 +47,22 @@
             <p class="text-lg mb-6">If you'd prefer, you can reach out through my social channels. Let's stay connected!</p>
             <ul class="flex justify-center space-x-8">
                 <li>
-                    <a href="https://github.com/your-profile" target="_blank" class="text-white hover:text-gray-200">
+                    <a href="https://github.com/prabesh1032" target="_blank" class="text-white hover:text-gray-200">
                         <i class="ri-github-fill text-4xl hover:scale-105 transition-all"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="text-white hover:text-gray-200">
+                    <a href="https://www.linkedin.com/in/prabesh-acharya-8547a2321/" target="_blank" class="text-white hover:text-gray-200">
                         <i class="ri-linkedin-fill text-4xl hover:scale-105 transition-all"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/your-profile" target="_blank" class="text-white hover:text-gray-200">
+                    <a href="https://x.com/PrabeshAch33319" target="_blank" class="text-white hover:text-gray-200">
                         <i class="ri-twitter-fill text-4xl hover:scale-105 transition-all"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/your-profile" target="_blank" class="text-white hover:text-gray-200">
+                    <a href="https://www.instagram.com/prabesh_ach/" target="_blank" class="text-white hover:text-gray-200">
                         <i class="ri-instagram-fill text-4xl hover:scale-105 transition-all"></i>
                     </a>
                 </li>

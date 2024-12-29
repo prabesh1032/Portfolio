@@ -11,7 +11,7 @@
             <a href="{{ route('contact') }}" id="contact-btn" class="bg-white text-indigo-500 px-6 py-2 rounded-lg text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105">
                 Get in Touch <i class="ri-arrow-right-line ml-2"></i>
             </a>
-            <img src="{{ asset('user.jpg') }}" alt="Prabesh" class="absolute bottom-0 right-0 hidden md:block w-64 h-64 rounded-full border-4 border-white shadow-lg hover:scale-105 transition-all">
+            <img src="{{ asset('user.jpg') }}" alt="Prabeshh" class="absolute bottom-0 right-0 hidden md:block w-64 h-64 rounded-full border-4 border-white shadow-lg hover:scale-105 transition-all">
         </div>
     </section>
 

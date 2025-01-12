@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
-class PackageController extends Controller
+class PageController extends Controller
 {
     public function home()
     {
+
         return view('welcome');
     }
 
@@ -23,9 +25,9 @@ class PackageController extends Controller
 
     public function projects()
     {
-        return view('projects');
+        $projects = Project::all();
+        return view('projects', compact('projects'));
     }
-
     public function resume()
     {
         return view('resume');

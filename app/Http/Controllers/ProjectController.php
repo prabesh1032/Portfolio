@@ -25,24 +25,21 @@ class ProjectController extends Controller
             'description' => 'required|string',
             'github_link' => 'nullable|url',
             'live_link' => 'nullable|url',
-            'image1' => 'nullable|image',
-            'image2' => 'nullable|image',
+            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'icon' => 'nullable|string', // Validate icon as string
         ]);
 
-        $data = $request->only(['name', 'description', 'github_link', 'live_link']);
+        $data = $request->only(['name', 'description', 'github_link', 'live_link', 'icon']);
 
         // Handle first image
         if ($request->hasFile('image1')) {
-            $image1 = time() . '_1.' . $request->image1->extension();
-            $request->image1->move(public_path('images'), $image1);
-            $data['image1'] = 'images' . $image1;
+            $path = $request->file('image1')->storeAs('images', $request->file('image1')->getClientOriginalName(), 'public');
+            $data['image1'] = $path;
         }
-
-        // Handle second image
         if ($request->hasFile('image2')) {
-            $image2 = time() . '_2.' . $request->image2->extension();
-            $request->image2->move(public_path('images'), $image2);
-            $data['image2'] = 'images' . $image2;
+            $path = $request->file('image2')->storeAs('images', $request->file('image2')->getClientOriginalName(), 'public');
+            $data['image2'] = $path;
         }
 
         // Create the project with the provided data
@@ -64,8 +61,9 @@ class ProjectController extends Controller
             'description' => 'nullable',
             'github_link' => 'nullable|url',
             'live_link' => 'nullable|url',
-            'image1' => 'nullable|image',
-            'image2' => 'nullable|image',
+            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'icon' => 'nullable|string', // Validate icon as string
         ]);
 
         $project = Project::find($id);
@@ -73,6 +71,7 @@ class ProjectController extends Controller
         $project->description = $request->description;
         $project->github_link = $request->github_link;
         $project->live_link = $request->live_link;
+        $project->icon = $request->icon; // Update icon field
 
         // Update image1 if a new image is uploaded
         if ($request->hasFile('image1')) {
@@ -110,8 +109,6 @@ class ProjectController extends Controller
 
         return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
     }
-
-
     public function destroy($id)
     {
         $project = Project::find($id);
@@ -138,5 +135,4 @@ class ProjectController extends Controller
         // Redirect to the project index page with a success message
         return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
     }
-
 }

@@ -12,9 +12,18 @@
                 <label for="name" class="block text-sm font-medium text-gray-700">Project Name</label>
                 <input type="text" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('name') }}" required>
                 @error('name')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="mb-4">
+                <label for="icon" class="block text-sm font-medium text-gray-700">Icon</label>
+                <input type="text" name="icon" id="icon" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('icon') }}">
+                @error('icon')
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -22,9 +31,9 @@
                 <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
                 <textarea name="description" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>{{ old('description') }}</textarea>
                 @error('description')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -32,9 +41,9 @@
                 <label for="github_link" class="block text-sm font-medium text-gray-700">GitHub Link</label>
                 <input type="url" name="github_link" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('github_link') }}">
                 @error('github_link')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -42,9 +51,9 @@
                 <label for="live_link" class="block text-sm font-medium text-gray-700">Live Link</label>
                 <input type="url" name="live_link" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('live_link') }}">
                 @error('live_link')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -52,9 +61,9 @@
                 <label for="image1" class="block text-sm font-medium text-gray-700">First Image</label>
                 <input type="file" name="image1" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                 @error('image1')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -62,9 +71,9 @@
                 <label for="image2" class="block text-sm font-medium text-gray-700">Second Image</label>
                 <input type="file" name="image2" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                 @error('image2')
-                    <div class="text-red-600 mt-2 text-sm">
-                        *{{ $message }}
-                    </div>
+                <div class="text-red-600 mt-2 text-sm">
+                    *{{ $message }}
+                </div>
                 @enderror
             </div>
 

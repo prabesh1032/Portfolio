@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('live_link')->nullable(); // Optional live link
             $table->string('image1'); // Path to first image
             $table->string('image2'); // Path to second image
+            $table->string('icon')->nullable(); // Path or code for Remix Icon (can store HTML or CSS class)
             $table->timestamps();
         });
     }

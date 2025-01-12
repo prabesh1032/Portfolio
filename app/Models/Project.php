@@ -16,5 +16,6 @@ class Project extends Model
         'live_link',
         'image1',
         'image2',
+        'icon',
     ];
 }

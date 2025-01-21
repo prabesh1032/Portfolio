@@ -14,7 +14,7 @@
     <!-- Contact Form Section -->
     <section class="py-12 bg-white shadow-lg">
         <div class="container mx-auto px-6">
-            <form action="" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+            <form action="{{ route('messages.store') }}" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-lg rounded-lg">
                 @csrf
                 <div class="mb-6">
                     <label for="name" class="block text-gray-700 font-semibold">Your Name</label>

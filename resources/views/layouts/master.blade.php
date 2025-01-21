@@ -43,9 +43,9 @@
 </head>
 
 <body class="bg-gray-50 text-gray-900">
-
+@include('Layouts.alert')
     <!-- Navigation Bar -->
-    <header class="bg-gradient-to-r from-gray-800 to-black text-white shadow-lg sticky top-0 z-50">
+    <header class="bg-gradient-to-r from-gray-600 to-black text-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
             <!-- Logo -->
             <a href="{{ route('home') }}" class="text-3xl font-bold tracking-wide">My Portfolio</a>
@@ -69,7 +69,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-12">
+    <footer class="bg-gray-700 text-white py-8 mt-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col sm:flex-row justify-between items-center">
                 <p class="text-sm mb-4 sm:mb-0">© {{ date('Y') }} My Portfolio. All rights reserved.</p>

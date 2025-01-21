@@ -15,6 +15,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased bg-gray-100">
+@include('Layouts.alert')
     <div class="flex">
         <!-- Sidebar -->
         <div class="w-56 h-screen sticky top-0 bg-blue-600 shadow-lg text-white">
@@ -33,7 +34,7 @@
                 <a href="" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
                     <i class="ri-lightbulb-line mr-2"></i> Manage Skills
                 </a>
-                <a href="" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
+                <a href="{{ route('messages.index') }}" class="p-3 hover:bg-blue-700 flex items-center transition duration-200 ease-in-out">
                     <i class="ri-mail-line mr-2"></i> Contact Inquiries
                 </a>
                 <form action="{{ route('logout') }}" method="POST" class="block p-3 hover:bg-red-600 transition duration-200 ease-in-out">

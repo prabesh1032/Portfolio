@@ -53,7 +53,6 @@
             <!-- Navigation Links -->
             <ul class="flex space-x-8">
                 <li><a href="{{ route('home') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'home' ? 'text-cyan-500 font-bold' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'about' ? 'text-cyan-500 font-bold' : '' }}">About</a></li>
                 <li><a href="{{ route('project') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'project' ? 'text-cyan-500 font-bold' : '' }}">Projects</a></li>
                 <li><a href="{{ route('contact') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'contact' ? 'text-cyan-500 font-bold' : '' }}">Contact</a></li>
                 <li><a href="{{ route('resume') }}" class="nav-link hover:text-cyan-500 {{ Route::currentRouteName() == 'resume' ? 'text-cyan-500 font-bold' : '' }}">Resume</a></li>
@@ -76,7 +75,7 @@
                 <ul class="flex space-x-8">
                     <li>
                         <a href="https://github.com/prabesh1032" target="_blank" class="hover:scale-110 transition">
-                            <i class="ri-github-line text-3xl text-black hover:text-gray-700"></i>
+                            <i class="ri-github-line text-3xl text-black hover:text-gray-500"></i>
                         </a>
                     </li>
                     <li>
@@ -107,7 +106,7 @@
                     </li>
                     <li>
                         <a href="https://x.com/PrabeshAch33319" target="_blank" class="hover:scale-110 transition">
-                            <i class="ri-twitter-x-line text-3xl text-black hover:text-gray-700"></i>
+                            <i class="ri-twitter-x-line text-3xl text-black hover:text-gray-500"></i>
                         </a>
                     </li>
                 </ul>

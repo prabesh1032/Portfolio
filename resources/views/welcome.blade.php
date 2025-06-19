@@ -13,7 +13,7 @@
             </a>
         </div>
         <div class="absolute bottom-0 right-0 hidden md:block w-64 h-64 rounded-full border-4 border-white shadow-lg hover:scale-105 transition-all">
-            <img src="{{ asset('user.jpg') }}" alt="Prabesh Acharya" class="w-full h-full object-cover rounded-full">
+            <img src="{{ asset('profile2.jpg') }}" alt="Prabesh Acharya" class="w-full h-full object-cover rounded-full">
         </div>
     </section>
 

@@ -4,10 +4,10 @@
 
 @section('content')
 <!-- Hero Section for Project -->
-<section class="bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-white py-24 relative shadow-lg">
+<section class="bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 py-24 relative shadow-lg">
     <div class="container mx-auto text-center px-4">
         <h1 class="text-6xl font-extrabold mb-6 animate-bounce">Featured Projects</h1>
-        <p class="text-xl mb-6 max-w-2xl mx-auto">
+        <p class="text-xl mb-6 max-w-2xl font-bold mx-auto">
             Explore my featured projects showcasing expertise in Laravel, JavaScript, and modern design, creating impactful and user-friendly solutions.
         </p>
     </div>

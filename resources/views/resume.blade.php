@@ -34,7 +34,7 @@
     <!-- About Section -->
     <section class="py-20 bg-white" id="about">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="flex flex-col lg:flex-row items-center gap-12 ">
                 <!-- Profile Image -->
                 <div class="lg:w-1/3 flex justify-center">
                     <div class="relative group">
@@ -46,7 +46,7 @@
 
                 <!-- About Content -->
                 <div class="lg:w-2/3">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                         <span class="inline-block mr-3"><i class="ri-user-heart-line text-indigo-600"></i></span>
                         About Me
                     </h2>

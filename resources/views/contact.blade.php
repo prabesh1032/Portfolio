@@ -1,81 +1,178 @@
 @extends('layouts.master')
 
-@section('title', 'Contact Me')
+@section('title', 'Get In Touch')
 
 @section('content')
     <!-- Hero Section -->
-    <section class="text-center py-20 bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 text-gray-900">
-        <h2 class="text-5xl font-extrabold mb-6 text-gray-800 animate-bounce">Contact Me</h2>
-        <p class="text-lg max-w-2xl mx-auto">
-            I would love to hear from you! Whether you're looking to collaborate, discuss a job opportunity, or just chat about technology, feel free to reach out using the form or through my social media channels.
-        </p>
+    <section class="relative py-24 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight animate-fade-in-down">
+                    Let's Connect</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-bold mb-8 leading-relaxed animate-fade-in-up">
+                    Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-12 bg-white shadow-lg">
+    <section class="py-20 bg-white" id="contact-form">
         <div class="container mx-auto px-6">
-            <form action="{{ route('messages.store') }}" method="POST" class="max-w-xl mx-auto bg-white p-8 shadow-lg rounded-lg">
-                @csrf
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-700 font-semibold">Your Name</label>
-                    <input type="text" id="name" name="name" required class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Contact Information -->
+                <div class="lg:w-1/2">
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl shadow-lg">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                            <i class="ri-chat-3-line text-indigo-600 mr-3"></i> Contact Information
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-lg mr-4 text-indigo-600">
+                                    <i class="ri-mail-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Email</h3>
+                                    <a href="mailto:prabesh11100@gmail.com" class="text-indigo-600 hover:text-indigo-800 transition">prabesh11100@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-lg mr-4 text-indigo-600">
+                                    <i class="ri-phone-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Phone</h3>
+                                    <a href="tel:+9779812965110" class="text-indigo-600 hover:text-indigo-800 transition">+977 9812965110</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-lg mr-4 text-indigo-600">
+                                    <i class="ri-map-pin-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Location</h3>
+                                    <p class="text-gray-600">Gaindakot, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h3 class="text-lg font-semibold text-gray-700 mb-4">Follow Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/prabesh1032" target="_blank" class="w-12 h-12 rounded-full bg-indigo-100 hover:bg-indigo-200 text-indigo-600 flex items-center justify-center transition">
+                                    <i class="ri-github-fill text-xl"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/prabesh-acharya-8547a2321/" target="_blank" class="w-12 h-12 rounded-full bg-indigo-100 hover:bg-indigo-200 text-indigo-600 flex items-center justify-center transition">
+                                    <i class="ri-linkedin-fill text-xl"></i>
+                                </a>
+                                <a href="https://x.com/PrabeshAch33319" target="_blank" class="w-12 h-12 rounded-full bg-indigo-100 hover:bg-indigo-200 text-indigo-600 flex items-center justify-center transition">
+                                    <i class="ri-twitter-fill text-xl"></i>
+                                </a>
+                                <a href="https://www.instagram.com/prabesh_ach/" target="_blank" class="w-12 h-12 rounded-full bg-indigo-100 hover:bg-indigo-200 text-indigo-600 flex items-center justify-center transition">
+                                    <i class="ri-instagram-fill text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-700 font-semibold">Your Email</label>
-                    <input type="email" id="email" name="email" required class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                </div>
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                            <i class="ri-send-plane-line text-blue-500 mr-3"></i> Send a Message
+                        </h2>
 
-                <div class="mb-6">
-                    <label for="message" class="block text-gray-700 font-semibold">Your Message</label>
-                    <textarea id="message" name="message" rows="6" required class="mt-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
-                </div>
+                        <form action="{{ route('messages.store') }}" method="POST" class="space-y-6">
+                            @csrf
 
-                <div class="text-center">
-                    <button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-md hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
-                        Send Message <i class="ri-send-plane-2-line inline-block ml-2"></i>
-                    </button>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="ri-user-line text-gray-400"></i>
+                                    </div>
+                                    <input type="text" id="name" name="name" required
+                                           class="pl-10 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                           placeholder="John Doe">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="ri-mail-line text-gray-400"></i>
+                                    </div>
+                                    <input type="email" id="email" name="email" required
+                                           class="pl-10 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                           placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+                                        <i class="ri-message-2-line text-gray-400"></i>
+                                    </div>
+                                    <textarea id="message" name="message" rows="5" required
+                                              class="pl-10 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                              placeholder="Hello Prabesh, I would like to discuss..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                    class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                <i class="ri-send-plane-2-line mr-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
-
-    <!-- Social Media Section -->
-    <section class="py-12 bg-gradient-to-r from-blue-300 to-cyan-500 text-white">
-        <div class="container mx-auto text-center">
-            <h3 class="text-2xl font-semibold mb-4">Connect with Me on Social Media</h3>
-            <p class="text-lg mb-6">If you'd prefer, you can reach out through my social channels. Let's stay connected!</p>
-            <ul class="flex justify-center space-x-8">
-                <li>
-                    <a href="https://github.com/prabesh1032" target="_blank" class="text-white hover:text-gray-200">
-                        <i class="ri-github-fill text-4xl hover:scale-105 transition-all"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/prabesh-acharya-8547a2321/" target="_blank" class="text-white hover:text-gray-200">
-                        <i class="ri-linkedin-fill text-4xl hover:scale-105 transition-all"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/PrabeshAch33319" target="_blank" class="text-white hover:text-gray-200">
-                        <i class="ri-twitter-fill text-4xl hover:scale-105 transition-all"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/prabesh_ach/" target="_blank" class="text-white hover:text-gray-200">
-                        <i class="ri-instagram-fill text-4xl hover:scale-105 transition-all"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contact Information Section -->
-    <section class="py-12 bg-white shadow-lg">
-        <div class="container mx-auto text-center">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">You can also reach me at:</h3>
-            <p class="text-lg text-gray-600 mb-4"><i class="ri-phone-fill text-indigo-600"></i> 9812965110</p>
-            <p class="text-lg text-gray-600"><i class="ri-mail-fill text-indigo-600"></i> prabesh11100@gmail.com</p>
-        </div>
-    </section>
+    @push('styles')
+    <style>
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    @endpush
 @endsection

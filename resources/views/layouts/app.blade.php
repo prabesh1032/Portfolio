@@ -56,11 +56,7 @@
                     <span class="font-medium">Manage Projects</span>
                     <i class="ri-arrow-right-s-line ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
                 </a>
-                <a href="" class="group flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200">
-                    <i class="ri-lightbulb-line mr-3 text-lg"></i>
-                    <span class="font-medium">Manage Skills</span>
-                    <i class="ri-arrow-right-s-line ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                </a>
+
                 <a href="{{ route('messages.index') }}" class="group flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200 {{ request()->routeIs('messages.*') ? 'bg-blue-50 text-blue-700 border-r-4 border-blue-500' : '' }}">
                     <i class="ri-mail-line mr-3 text-lg"></i>
                     <span class="font-medium">Inquiries</span>

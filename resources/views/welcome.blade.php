@@ -4,37 +4,70 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 text-gray-800 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
-                <!-- Text Content -->
-                <div class="text-center lg:text-left lg:w-1/2 z-10">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6 animate-bounce text-gray-900">
-                        Hello, I'm <span class="block sm:inline">Prabesh Acharya</span>
-                    </h1>
-                    <p class="text-base sm:text-lg md:text-xl font-bold mb-6 sm:mb-8 text-black max-w-2xl mx-auto lg:mx-0">
-                        A passionate Full-Stack Developer crafting web solutions that make a difference.
-                    </p>
-                    <a href="{{ route('contact') }}" id="contact-btn" class="inline-block bg-white text-indigo-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Get in Touch <i class="ri-arrow-right-line ml-2"></i>
-                    </a>
-                </div>
+<section class="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 text-gray-800 py-8 sm:py-10 lg:py-12 relative overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div class="text-center lg:text-left lg:w-1/2 z-10">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 sm:mb-4 text-gray-900">
+                    Hello, I'm <br>
+                    <span id="typewriter" class="text-indigo-900 inline-block"></span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-black max-w-2xl mx-auto lg:mx-0">
+                    A passionate Web Developer crafting web solutions that make a difference.
+                </p>
+                <a href="{{ route('contact') }}" id="contact-btn" class="inline-block bg-white text-indigo-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Get in Touch <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
 
-                <!-- Profile Image -->
-                <div class="mt-8 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
-                    <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-white shadow-xl hover:scale-105 transition-all duration-300">
-                        <img src="{{ asset('profile2.jpg') }}" alt="Prabesh Acharya" class="w-full h-full object-cover rounded-full">
-                    </div>
+            <!-- Profile Image -->
+            <div class="mt-6 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
+                <div class="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full border-4 border-white shadow-xl hover:scale-105 transition-all duration-300">
+                    <img src="{{ asset('profile2.jpg') }}" alt="Prabesh Acharya" class="w-full h-full object-cover rounded-full">
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Decorative Elements -->
-        <div class="absolute top-0 left-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-x-16 -translate-y-16"></div>
-        <div class="absolute bottom-0 right-0 w-24 h-24 bg-white opacity-10 rounded-full translate-x-12 translate-y-12"></div>
-    </section>
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 left-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-x-16 -translate-y-16"></div>
+    <div class="absolute bottom-0 right-0 w-24 h-24 bg-white opacity-10 rounded-full translate-x-12 translate-y-12"></div>
+</section>
 
-    <!-- About Section -->
+<!-- Typing Effect Script -->
+<script>
+    const element = document.getElementById("typewriter");
+    const text = "Prabesh Acharya";
+    let index = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        element.innerText = text.substring(0, index);
+
+        if (!isDeleting && index < text.length) {
+            index++;
+        } else if (isDeleting && index > 0) {
+            index--;
+        }
+
+        if (index === text.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000); // Pause before deleting
+            return;
+        }
+
+        if (index === 0 && isDeleting) {
+            isDeleting = false;
+        }
+
+        setTimeout(typeEffect, isDeleting ? 80 : 120);
+    }
+
+    typeEffect();
+</script>
+
+<!-- About Section -->
 <section class="py-12 sm:py-16 lg:py-20 bg-gray-50" id="about">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
@@ -43,7 +76,10 @@
                 <span class="block sm:inline">Who I Am</span>
             </h2>
             <p class="text-gray-700 max-w-4xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl leading-relaxed px-4">
-                I'm Prabesh Acharya, a passionate developer specializing in Laravel and JavaScript, with a strong focus on creating user-friendly web applications. I have a Bachelor's in Information Management and excel in integrating backend functionality with clean frontend designs using TailwindCSS. My projects, like YatraSathi and FoodCircle, showcase my skills in crafting seamless user experiences and efficient systems. Whether it's implementing payment systems, creating dashboards, or enhancing search functionality, I enjoy bringing ideas to life while keeping simplicity and innovation at the core of my work.
+                I'm Prabesh Acharya — a dedicated web developer with a strong passion for building clean, functional, and user-friendly web experiences. With a Bachelor's degree in Information Management, I specialize in Laravel and JavaScript, and enjoy bringing ideas to life through efficient backend logic and responsive frontend design using TailwindCSS.
+            </p>
+            <p class="text-gray-700 max-w-4xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl leading-relaxed px-4">
+                I focus on writing thoughtful, maintainable code and crafting digital solutions that are both technically sound and intuitive for users. Whether it's building dashboards, implementing secure payment systems, or optimizing performance, I believe in a balanced approach that prioritizes both simplicity and functionality.
             </p>
             <a href="#projects" class="inline-block text-indigo-600 font-semibold hover:underline transition-all duration-300 transform hover:scale-105 text-base sm:text-lg">
                 Check out my projects <i class="ri-arrow-right-line ml-2"></i>
@@ -51,6 +87,8 @@
         </div>
     </div>
 </section>
+
+
    <!-- Skills Section -->
 <section class="py-12 sm:py-16 lg:py-20 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +106,9 @@
                     <i class="ri-code-s-slash-line"></i>
                 </div>
                 <h3 class="font-semibold text-lg sm:text-xl text-center mb-2">Web Development</h3>
-                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">Building dynamic websites using modern technologies.</p>
+                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">
+                    Developing interactive and efficient websites using modern frameworks and best practices.
+                </p>
             </div>
 
             <!-- Responsive Design -->
@@ -77,7 +117,9 @@
                     <i class="ri-device-line"></i>
                 </div>
                 <h3 class="font-semibold text-lg sm:text-xl text-center mb-2">Responsive Design</h3>
-                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">Creating mobile-first, responsive layouts.</p>
+                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">
+                    Building mobile-first layouts that adapt seamlessly to all screen sizes.
+                </p>
             </div>
 
             <!-- Laravel & Tailwind -->
@@ -86,7 +128,9 @@
                     <i class="ri-code-box-line"></i>
                 </div>
                 <h3 class="font-semibold text-lg sm:text-xl text-center mb-2">Laravel & Tailwind</h3>
-                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">Crafting modern web applications using Laravel and designing with Tailwind CSS.</p>
+                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">
+                    Creating fast, secure, and elegant web applications using Laravel and Tailwind CSS.
+                </p>
             </div>
 
             <!-- Database Management -->
@@ -95,7 +139,9 @@
                     <i class="ri-database-2-line"></i>
                 </div>
                 <h3 class="font-semibold text-lg sm:text-xl text-center mb-2">Database Management</h3>
-                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">Designing and managing databases for optimized performance.</p>
+                <p class="text-gray-700 text-sm sm:text-base text-center leading-relaxed">
+                    Designing and optimizing databases to ensure data integrity and performance.
+                </p>
             </div>
         </div>
     </div>
@@ -125,9 +171,7 @@
                         <i class="ri-plane-fill text-blue-600 ml-2"></i>
                     </h3>
                     <p class="text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">A travel booking platform built with Laravel. It allows users to browse travel packages and book their trips.</p>
-                    <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                        View Project <i class="ri-arrow-right-line ml-2"></i>
-                    </a>
+
                 </div>
             </div>
 
@@ -143,9 +187,7 @@
                         <i class="ri-shopping-cart-fill text-green-600 ml-2"></i>
                     </h3>
                     <p class="text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">An e-commerce platform where users can browse products, add to cart, and make purchases online.</p>
-                    <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                        View Project <i class="ri-arrow-right-line ml-2"></i>
-                    </a>
+
                 </div>
             </div>
 
@@ -161,11 +203,17 @@
                         <i class="ri-restaurant-line text-red-600 ml-2"></i>
                     </h3>
                     <p class="text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">A platform to connect food lovers with local restaurants.</p>
-                    <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                        View Project <i class="ri-arrow-right-line ml-2"></i>
-                    </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Responsive View All Projects Button -->
+        <div class="mt-10 flex justify-center">
+            <a href="{{ route('project') }}"
+               class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg text-base sm:text-lg shadow-md hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
+                View All Projects
+                <i class="ri-arrow-right-line ml-2"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -182,38 +230,27 @@
 
             <div class="space-y-6 sm:space-y-8">
                 <p class="text-gray-700 max-w-4xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-center">
-                    My journey began as a curious learner eager to explore the world of technology. Starting with the basics of HTML, CSS, and JavaScript, I gradually expanded my skill set to include PHP and Laravel. While studying for my Bachelor's in Information Management, I honed my technical expertise and built a solid foundation in IT and web technologies.
+                    My journey into web development started with a deep curiosity about how the digital world works. I began learning the fundamentals of HTML, CSS, and JavaScript, and over time, expanded my expertise into backend development with PHP and Laravel.
                 </p>
 
                 <p class="text-gray-700 max-w-4xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-center">
-                    Along the way, I developed impactful projects like <span class="text-indigo-600 font-semibold">YatraSathi</span>, a travel platform that combines responsive design with Laravel's powerful backend, and an <span class="text-indigo-600 font-semibold">e-commerce website</span> designed for seamless user experience. Each project brought unique challenges, teaching me to be resourceful, detail-oriented, and adaptable.
+                    While pursuing my Bachelor's degree in Information Management, I built a solid foundation in both IT principles and hands-on development. This academic journey helped shape my understanding of how to build structured, efficient, and user-focused applications.
                 </p>
 
                 <p class="text-gray-700 max-w-4xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-center">
-                    Currently, I am exploring advanced concepts such as Vue.js for dynamic user interfaces and diving into fields like machine learning and AI to broaden my expertise. My passion for learning and growing fuels my commitment to creating innovative, user-centric solutions.
+                    A significant milestone in my growth was my internship at <span class="font-semibold text-indigo-600">BITS (Bitmat IT Solution)</span>, where I worked on real-world projects in a professional environment. It taught me the value of teamwork, code quality, and practical problem-solving in production-level applications.
+                </p>
+
+                <p class="text-gray-700 max-w-4xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-center">
+                    Today, I continue to sharpen my skills and explore new ways to bring ideas to life through clean code and thoughtful design. I strive to build web experiences that are not only functional but also intuitive and meaningful.
                 </p>
 
                 <div class="text-center pt-4 sm:pt-6">
                     <p class="text-indigo-600 font-semibold text-lg sm:text-xl">
-                        The journey is far from over, and I am excited to see where my skills and ambitions will take me next!
+                        My journey is just beginning — and I’m excited for what lies ahead.
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-    <!-- Call to Action -->
-<section class="bg-gradient-to-r from-blue-300 to-cyan-300 text-gray-800 py-12 sm:py-16 lg:py-20">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-indigo-600">Want to work together?</h2>
-            <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-gray-700 leading-relaxed">
-                Let's build something amazing! Reach out to discuss your project ideas. I'm excited to collaborate and bring your vision to life.
-            </p>
-            <a href="{{ route('contact') }}" id="contact-btn"
-               class="inline-block bg-white text-indigo-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Contact Me <i class="ri-arrow-right-line ml-2"></i>
-            </a>
         </div>
     </div>
 </section>

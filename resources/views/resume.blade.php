@@ -4,16 +4,16 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="relative py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-blue-600 to-indigo-800 text-white overflow-hidden">
+    <section class="relative py-10 sm:py-14 lg:py-20 bg-gradient-to-br from-blue-600 to-indigo-800 text-white overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <div
-                class="absolute top-0 left-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
+                class="absolute top-0 left-0 w-24 sm:w-36 lg:w-48 h-24 sm:h-36 lg:h-48 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
             </div>
             <div
-                class="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
+                class="absolute top-0 right-0 w-24 sm:w-36 lg:w-48 h-24 sm:h-36 lg:h-48 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
             </div>
             <div
-                class="absolute bottom-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000">
+                class="absolute bottom-0 right-0 w-24 sm:w-36 lg:w-48 h-24 sm:h-36 lg:h-48 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000">
             </div>
         </div>
 
@@ -24,7 +24,7 @@
                         class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">Acharya</span>
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-6 sm:mb-8 leading-relaxed animate-fade-in-up">
-                    Full-Stack Developer | Laravel Specialist | Digital Solution Architect
+                    Web Developer | Laravel Specialist | Digital Solution Architect
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate-fade-in-up">
                     <a href="#projects"
@@ -64,7 +64,7 @@
 
                     <div class="prose prose-sm sm:prose-base lg:prose-lg text-gray-600 mb-6 sm:mb-8">
                         <p class="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
-                            A passionate <span class="font-semibold text-indigo-700">Full Stack Developer</span> with
+                            A passionate <span class="font-semibold text-indigo-700">Web Developer</span> with
                             expertise in Laravel and modern JavaScript frameworks. I specialize in transforming complex
                             ideas into elegant, user-friendly web applications.
                         </p>
@@ -238,85 +238,88 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 flex flex-col sm:flex-row items-center justify-center">
-                    <i class="ri-graduation-cap-line text-blue-500 mr-0 sm:mr-3 mb-2 sm:mb-0 text-xl sm:text-2xl lg:text-3xl"></i>
-                    <span>Education & Background</span>
-                </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-                    My academic journey and professional development
-                </p>
-            </div>
+   <!-- Education Section -->
+<section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 flex flex-col sm:flex-row items-center justify-center">
+                <i class="ri-graduation-cap-line text-blue-500 mr-0 sm:mr-3 mb-2 sm:mb-0 text-xl sm:text-2xl lg:text-3xl"></i>
+                <span>Education & Background</span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                My academic journey and professional development
+            </p>
+        </div>
 
-            <div class="max-w-3xl mx-auto">
-                <div class="relative">
-                    <!-- Timeline -->
-                    <div class="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-blue-200 transform translate-x-0.5"></div>
+        <div class="max-w-3xl mx-auto">
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-blue-200 transform translate-x-0.5"></div>
 
-                    <!-- Education Item -->
-                    <div class="relative pl-12 sm:pl-16 pb-8 sm:pb-12 group">
-                        <div
-                            class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-blue-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
-                            <i class="ri-graduation-cap-fill text-sm sm:text-xl"></i>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Bachelor's in Information Management</h3>
-                        <p class="text-blue-600 font-medium mb-2 text-sm sm:text-base">Lumbini ICT Campus • 2020 - Present</p>
-                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Comprehensive program covering web technologies, database management, software engineering, and
-                            IT project management with hands-on practical experience.
-                        </p>
+                <!-- Education Item -->
+                <div class="relative pl-12 sm:pl-16 pb-8 sm:pb-12 group">
+                    <div
+                        class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-blue-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="ri-graduation-cap-fill text-sm sm:text-xl"></i>
                     </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Bachelor's in Information Management</h3>
+                    <p class="text-blue-600 font-medium mb-2 text-sm sm:text-base">Lumbini ICT Campus • 2020 - Present</p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Comprehensive program covering web technologies, database management, software engineering, and
+                        IT project management with hands-on practical experience.
+                    </p>
+                </div>
 
-                    <!-- Self-Learning -->
-                    <div class="relative pl-12 sm:pl-16 pb-8 sm:pb-12 group">
-                        <div
-                            class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-indigo-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
-                            <i class="ri-book-open-line text-sm sm:text-xl"></i>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Self-Taught Developer Journey</h3>
-                        <p class="text-indigo-600 font-medium mb-2 text-sm sm:text-base">2018 - Present</p>
-                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Mastered web development through online courses, documentation study, and building real-world
-                            projects. Developed expertise in Laravel, modern JavaScript, and UI/UX principles.
-                        </p>
+                <!-- Self-Learning -->
+                <div class="relative pl-12 sm:pl-16 pb-8 sm:pb-12 group">
+                    <div
+                        class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-indigo-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="ri-book-open-line text-sm sm:text-xl"></i>
                     </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Self-Taught Developer Journey</h3>
+                    <p class="text-indigo-600 font-medium mb-2 text-sm sm:text-base">2018 - Present</p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Learned web development through online courses, documentation, and consistent practice. Built hands-on
+                        experience with Laravel, modern JavaScript, and UI/UX principles by working on real-world challenges.
+                    </p>
+                </div>
 
-                    <!-- Certifications -->
-                    <div class="relative pl-12 sm:pl-16 group">
-                        <div
-                            class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-purple-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
-                            <i class="ri-medal-line text-sm sm:text-xl"></i>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Certifications & Workshops</h3>
-                        <p class="text-purple-600 font-medium mb-2 text-sm sm:text-base">Various • 2019 - Present</p>
-                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Completed multiple professional certifications in web development, attended tech workshops, and
-                            participated in hackathons to enhance practical skills.
-                        </p>
+                <!-- Certifications -->
+                <div class="relative pl-12 sm:pl-16 pb-8 sm:pb-12 group">
+                    <div
+                        class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-purple-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="ri-medal-line text-sm sm:text-xl"></i>
                     </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Certifications & Workshops</h3>
+                    <p class="text-purple-600 font-medium mb-2 text-sm sm:text-base">Various • 2019 - Present</p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Completed certifications in web development, participated in coding workshops and hackathons,
+                        and continuously sharpened skills through community engagement and practical learning.
+                    </p>
+                </div>
+
+                <!-- Internship -->
+                <div class="relative pl-12 sm:pl-16 group">
+                    <div
+                        class="absolute left-0 top-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-teal-500 text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="ri-briefcase-line text-sm sm:text-xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1">Internship – Web Development</h3>
+                    <p class="text-teal-600 font-medium mb-2 text-sm sm:text-base">BITS (Bitmat IT Solution) • 2024</p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Gained real-world experience working on production-level projects in a collaborative environment.
+                        Focused on backend logic, frontend integration, and understanding client-driven development processes.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Contact Section -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white" id="contact">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Ready to Collaborate?</h2>
-                <p class="text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-                    Have a project in mind or want to discuss opportunities? I'd love to hear from you.
-                </p>
-                <a href="{{ route('contact') }}" id="contact-btn"
-                    class="inline-block bg-white text-indigo-500 px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-base sm:text-xl hover:bg-indigo-200 hover:text-indigo-800 transition-all duration-300 transform hover:scale-105">
-                    Get in Touch <i class="ri-arrow-right-line ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+
 
     @push('styles')
         <style>

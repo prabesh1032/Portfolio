@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- Hero Section for Project -->
-<section class="bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 py-12 sm:py-16 lg:py-24 relative shadow-lg">
+<section class="bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 py-6 sm:py-8 lg:py-12 relative shadow-lg">
     <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 animate-bounce">Featured Projects</h1>
         <p class="text-base sm:text-lg lg:text-xl mb-6 max-w-2xl font-bold mx-auto leading-relaxed">
@@ -62,17 +62,4 @@
     </div>
 </section>
 @endforeach
-
-<!-- Call to Action -->
-<section class="bg-gradient-to-r from-indigo-300 to-blue-400 text-gray-800 py-20">
-    <div class="container mx-auto text-center px-4">
-        <h2 class="text-5xl font-bold mb-6">Let’s Collaborate <i class="ri-handshake-fill"></i></h2>
-        <p class="text-xl max-w-2xl mx-auto mb-8">
-            Have an idea? Let’s work together to build something amazing. Reach out and start the conversation today!
-        </p>
-        <a href="#contact" class="bg-white text-blue-600 font-semibold py-4 px-12 rounded-lg shadow-xl hover:bg-gray-100 transition duration-300 ease-in-out text-lg flex items-center justify-center mx-auto w-fit">
-            Contact Me <i class="ri-arrow-right-line ml-2"></i>
-        </a>
-    </div>
-</section>
 @endsection

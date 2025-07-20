@@ -5,16 +5,16 @@
 @section('content')
     <!-- Hero Section -->
     <section
-        class="relative py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 overflow-hidden">
+        class="relative py-8 sm:py-10 lg:py-14 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-gray-900 overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <div
-                class="absolute top-0 left-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
+                class="absolute top-0 left-0 w-24 sm:w-32 lg:w-40 h-24 sm:h-32 lg:h-40 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
             </div>
             <div
-                class="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
+                class="absolute top-0 right-0 w-24 sm:w-32 lg:w-40 h-24 sm:h-32 lg:h-40 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
             </div>
             <div
-                class="absolute bottom-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000">
+                class="absolute bottom-0 right-0 w-24 sm:w-32 lg:w-40 h-24 sm:h-32 lg:h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000">
             </div>
         </div>
 

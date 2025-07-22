@@ -10,7 +10,7 @@
         <p class="text-gray-600">Your portfolio overview</p>
     </div>
 
-    <!-- Animated Stats Grid -->
+    <!--Animated Stats Grid-->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-3 mb-8">
         <!-- Project Card -->
         <div
